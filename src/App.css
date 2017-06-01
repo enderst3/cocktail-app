@@ -1,0 +1,9 @@
+.App {
+  text-align: center;
+}
+
+#header {
+  background-color: lightgrey;
+  height: 75px;
+  padding: 20px;
+}
