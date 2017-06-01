@@ -1,9 +1,11 @@
-.App {
+.header {
   text-align: center;
 }
 
-#header {
-  background-color: lightgrey;
-  height: 75px;
-  padding: 20px;
+.searchBar {
+  text-align: center;
+}
+
+.results {
+  text-align: center;
 }
