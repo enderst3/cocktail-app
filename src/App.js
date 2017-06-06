@@ -15,7 +15,7 @@ class App extends Component {
       drinks: []
     }
 
-    this.drinkSearch('')
+    this.drinkSearch('gin and tonic')
 
   }
 
