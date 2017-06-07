@@ -22,7 +22,7 @@ class App extends Component {
   }
 
   drinkSearch(searchTerm) {
-    if (searchTerm != '') {
+    if (searchTerm !== '') {
       fetch(`${baseUrl}${searchTerm}`)
         .then((response) => {
           return response.json()
@@ -41,8 +41,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Col md={10} mdOffset={1}>
-          <Panel footer="my footer">
+        <Col md={8} mdOffset={2}>
+          <Panel footer="&copy;2017 My Cocktails Inc.">
             <Jumbotron className='Header'>
             <h1>Cocktail Search App</h1>
             </Jumbotron>

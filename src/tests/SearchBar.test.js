@@ -21,5 +21,4 @@ describe('SearchBar', () => {
     textBox.simulate('change', event)
     expect(handleOnChange).toBeCalledWith(event)
   })
-
 })
