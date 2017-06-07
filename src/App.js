@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import {Jumbotron, Col, Panel} from 'react-bootstrap'
-import SearchBar from './searchBar'
-import DrinkList from './drinkList'
+import SearchBar from './SearchBar'
+import DrinkList from './DrinkList'
+import RecipeDetail from './RecipeDetail'
 import './App.css'
 
 
@@ -12,23 +13,29 @@ class App extends Component {
     super(props)
 
     this.state = {
-      drinks: []
+      drinks: [],
+      selectedDrink: null
     }
 
-    this.drinkSearch('gin and tonic')
+    this.drinkSearch('')
 
   }
 
   drinkSearch(searchTerm) {
-    fetch(`${baseUrl}${searchTerm}`)
-      .then((response) => {
-        return response.json()
-      }).then((json) => {
-        this.setState({drinks: json.drinks})
-        console.log('parsed json', json)
-      }).catch((err) => {
-        console.log('parsing failed', err)
-      })
+    if (searchTerm != '') {
+      fetch(`${baseUrl}${searchTerm}`)
+        .then((response) => {
+          return response.json()
+        }).then((json) => {
+          this.setState({
+            drinks: json.drinks,
+            selectedDrink: null
+          })
+          console.log('parsed json', json)
+        }).catch((err) => {
+          console.log('parsing failed', err)
+        })
+      }
   }
 
   render() {
@@ -36,14 +43,18 @@ class App extends Component {
       <div className="App">
         <Col md={10} mdOffset={1}>
           <Panel footer="my footer">
-            <Jumbotron className='header'>
+            <Jumbotron className='Header'>
             <h1>Cocktail Search App</h1>
             </Jumbotron>
             <SearchBar
               onSearchTermChange={searchTerm => this.drinkSearch(searchTerm)}
             />
+            <RecipeDetail
+              drink={this.state.selectedDrink}
+             />
             <DrinkList
               drinks={this.state.drinks}
+              onDrinkSelect={selectedDrink => this.setState({selectedDrink})}
             />
           </Panel>
         </Col>

@@ -10,11 +10,11 @@ class SearchBar extends Component {
   }
   render() {
     return (
-      <Panel className='searchBar'>
+      <Panel className='SearchBar'>
         <h3>Enter a Drink Name:</h3>
         <form>
           <FormControl
-            id="drinkInput"
+            id="drink-input"
             type="text"
             placeholder="Enter Drink Name..."
             value={this.state.searchTerm}

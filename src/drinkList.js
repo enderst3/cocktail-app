@@ -1,5 +1,5 @@
 import React from 'react'
-import DrinkListItem from './drinkListItem'
+import DrinkListItem from './DrinkListItem'
 import {ListGroup} from 'react-bootstrap'
 
 
@@ -9,11 +9,12 @@ const DrinkList = (props) => {
       <DrinkListItem
         key={drink.idDrink}
         drink={drink}
+        onDrinkSelect={props.onDrinkSelect}
       />
     )
   })
   return (
-    <ListGroup className='drink-list'>
+    <ListGroup className='DrinkList'>
       {drinkItems}
     </ListGroup>
   )

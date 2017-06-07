@@ -1,11 +1,32 @@
-.header {
+.Header {
   text-align: center;
 }
 
-.searchBar {
+.SearchBar {
   text-align: center;
 }
 
-.results {
+.Results {
   text-align: center;
+  cursor: pointer;
+}
+
+.Results:hover {
+  background-color: #eee;
+}
+
+.RecipeDetail {
+  text-align: center;
+}
+
+.DrinkName {
+  text-align: center;
+}
+
+.CocktailImage {
+  text-align: center;
+}
+
+p {
+  font-size: 16px;
 }
