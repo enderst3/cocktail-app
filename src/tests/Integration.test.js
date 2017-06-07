@@ -18,7 +18,7 @@ describe('UI elements are rendered on page', () => {
       }, 50)
     })
 
-    it('serch bar exists', () => {
+    it('SearchBar exists', () => {
       expect(wrapper.find('.SearchBar').exists()).toBe(true)
     })
 

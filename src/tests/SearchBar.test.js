@@ -11,12 +11,12 @@ describe('SearchBar', () => {
   })
 
   it('will make the correct callback when adding text', () => {
-    const SearchBar = shallow(
+    const searchBar = shallow(
       <SearchBar
         handleOnChange={handleOnChange}
       />
     )
-    const textBox = SearchBar.find('#drink-input')
+    const textBox = searchBar.find('#drink-input')
     const event = {target: {value: 'gin'}}
     textBox.simulate('change', event)
     expect(handleOnChange).toBeCalledWith(event)
