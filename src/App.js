@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {Jumbotron, Col, Panel} from 'react-bootstrap'
-// import SearchBar from './SearchBar'
+import SearchBar from './SearchBar'
 import DrinkList from './DrinkList'
 import RecipeDetail from './RecipeDetail'
 import './App.css'
