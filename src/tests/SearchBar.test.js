@@ -2,6 +2,7 @@ import React from 'react'
 import SearchBar from '../SearchBar'
 import { shallow } from 'enzyme'
 
+/* global it describe expect beforeEach jest */
 
 describe('SearchBar', () => {
   let handleOnChange
