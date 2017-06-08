@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import {FormControl, Panel} from 'react-bootstrap'
 import PropTypes from 'prop-types'
 
+// change onchange to this:
+// onChange={this.handleOnChange}
+
 class SearchBar extends Component {
   constructor (props) {
     super(props)
