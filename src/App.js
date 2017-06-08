@@ -5,11 +5,12 @@ import DrinkList from './DrinkList'
 import RecipeDetail from './RecipeDetail'
 import './App.css'
 
+/* global fetch */
 
 const baseUrl = 'http://www.thecocktaildb.com/api/json/v1/1/search.php?s='
 
 class App extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
 
     this.state = {
@@ -18,10 +19,9 @@ class App extends Component {
     }
 
     this.drinkSearch('')
-
   }
 
-  drinkSearch(searchTerm) {
+  drinkSearch (searchTerm) {
     if (searchTerm !== '') {
       fetch(`${baseUrl}${searchTerm}`)
         .then((response) => {
@@ -35,16 +35,16 @@ class App extends Component {
         }).catch((err) => {
           console.log('parsing failed', err)
         })
-      }
+    }
   }
 
-  render() {
+  render () {
     return (
-      <div className="App">
+      <div className='App'>
         <Col md={8} mdOffset={2}>
-          <Panel footer="&copy;2017 My Cocktails Inc.">
+          <Panel footer='&copy;2017 My Cocktails Inc.'>
             <Jumbotron className='Header'>
-            <h1>Cocktail Search App</h1>
+              <h1>Cocktail Search App</h1>
             </Jumbotron>
             <SearchBar
               onSearchTermChange={searchTerm => this.drinkSearch(searchTerm)}
@@ -59,7 +59,7 @@ class App extends Component {
           </Panel>
         </Col>
       </div>
-    );
+    )
   }
 }
 

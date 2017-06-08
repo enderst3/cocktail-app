@@ -1,10 +1,11 @@
 import React from 'react'
 import {Panel} from 'react-bootstrap'
+import PropTypes from 'prop-types'
 
 const RecipeDetail = ({drink}) => {
   if (!drink) {
     return (
-      <div></div>
+      <div />
     )
   }
 
@@ -42,6 +43,10 @@ const RecipeDetail = ({drink}) => {
       </div>
     </Panel>
   )
+}
+
+RecipeDetail.propTypes = {
+  drink: PropTypes.object
 }
 
 export default RecipeDetail
