@@ -14,7 +14,7 @@ describe('SearchBar', () => {
   it('will make the correct callback when adding text', () => {
     const searchBar = shallow(
       <SearchBar
-        handleOnChange={handleOnChange}
+        onSearchTermChange={handleOnChange}
       />
     )
     const textBox = searchBar.find('#drink-input')

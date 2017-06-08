@@ -26,7 +26,7 @@ describe('UI elements are rendered on page', () => {
       expect(wrapper.find('.RecipeDetail').exists()).toBe(false)
     })
 
-    it('drink list exists', () => {
+    it('drinklist exists', () => {
       expect(wrapper.find('.DrinkList').exists()).toBe(true)
     })
 
