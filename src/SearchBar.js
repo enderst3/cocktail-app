@@ -6,7 +6,7 @@ class SearchBar extends Component {
   constructor (props) {
     super(props)
 
-    this.state = {searchTerm: ''}
+    this.textChangeCallback = this.props.onFilterTextInput.bind(this)
   }
   render () {
     return (
@@ -17,22 +17,19 @@ class SearchBar extends Component {
             id='drink-input'
             type='text'
             placeholder='Enter Drink Name...'
-            value={this.state.searchTerm}
-            onChange={e => this.handleOnChange(e.target.value)}
+            value={this.props.searchTerm}
+            onChange={this.textChangeCallback}
           />
         </form>
       </Panel>
     )
   }
 
-  handleOnChange (searchTerm) {
-    this.setState({searchTerm})
-    this.props.onSearchTermChange(searchTerm)
-  }
 }
 
 SearchBar.propTypes = {
-  onSearchTermChange: PropTypes.func
+  onFilterTextInput: PropTypes.func,
+  searchTerm: PropTypes.string
 }
 
 export default SearchBar
