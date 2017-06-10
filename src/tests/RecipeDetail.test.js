@@ -24,4 +24,5 @@ describe('RecipeDetail', () => {
   it('It should display and image', () => {
     expect(wrapper.find(<img />).exists()).toBe(false)
   })
+
 })

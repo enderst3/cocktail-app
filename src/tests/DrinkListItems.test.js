@@ -18,4 +18,5 @@ describe('DrinkListItem', () => {
   it('Should display drink name', () => {
     expect(wrapper.find('.DrinkName').exists()).toBe(true)
   })
+  
 })
