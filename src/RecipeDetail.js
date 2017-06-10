@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 const RecipeDetail = ({drink}) => {
   if (!drink) {
     return (
-      <div />
+      <div className='StartDiv' />
     )
   }
 

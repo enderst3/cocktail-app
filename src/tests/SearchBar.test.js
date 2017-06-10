@@ -6,6 +6,7 @@ import { shallow } from 'enzyme'
 
 describe('SearchBar', () => {
   let handleOnChange
+  let wrapper
 
   beforeEach(() => {
     handleOnChange = jest.fn()
@@ -21,5 +22,17 @@ describe('SearchBar', () => {
     const event = {target: {value: 'gin'}}
     textBox.simulate('change', event)
     expect(handleOnChange).toBeCalledWith(event)
+  })
+
+  beforeEach(() => {
+    wrapper = shallow(
+      <SearchBar />
+    )
+  })
+  it('It should have a FormControl element', () => {
+    expect(wrapper.find('#drink-input').exists()).toBe(true)
+  })
+  it('It should have a panel element', () => {
+    expect(wrapper.find('.SearchBar').exists()).toBe(true)
   })
 })
