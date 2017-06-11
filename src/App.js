@@ -14,14 +14,16 @@ class App extends Component {
     super(props)
 
     this.state = {
+      searchTerm: '',
       drinks: [],
       selectedDrink: null
     }
-
-    this.drinkSearch('')
+    this.onFilterTextInput = this.onFilterTextInput.bind(this)
   }
 
-  drinkSearch (searchTerm) {
+  onFilterTextInput (e) {
+    const searchTerm = e.target.value
+    this.setState({searchTerm})
     if (searchTerm !== '') {
       fetch(`${baseUrl}${searchTerm}`)
         .then((response) => {
@@ -47,7 +49,8 @@ class App extends Component {
               <h1>Cocktail Search App</h1>
             </Jumbotron>
             <SearchBar
-              onSearchTermChange={searchTerm => this.drinkSearch(searchTerm)}
+              searchTerm={this.state.searchTerm}
+              onFilterTextInput={this.onFilterTextInput}
             />
             <RecipeDetail
               drink={this.state.selectedDrink}

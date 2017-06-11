@@ -4,6 +4,7 @@ import {ListGroup} from 'react-bootstrap'
 import PropTypes from 'prop-types'
 
 const DrinkList = (props) => {
+  if (props.drinks === null) return null
   const drinkItems = props.drinks.map((drink) => {
     return (
       <DrinkListItem

@@ -12,11 +12,5 @@ describe('DrinkListItem', () => {
       <DrinkListItem />
     )
   })
-  it('Should display image', () => {
-    expect(wrapper.find('.CocktailImage').exists()).toBe(true)
-  })
-  it('Should display drink name', () => {
-    expect(wrapper.find('.DrinkName').exists()).toBe(true)
-  })
-  
+
 })
