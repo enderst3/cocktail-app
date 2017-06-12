@@ -5,22 +5,22 @@ import { shallow } from 'enzyme'
 /* global it describe expect beforeEach jest */
 
 describe('SearchBar', () => {
-  let onFilterTextInput
+  let onSearchTermInput
   let wrapper
 
   beforeEach(() => {
-    onFilterTextInput = jest.fn()
+    onSearchTermInput = jest.fn()
   })
 
   it('will make the correct callback when adding text', () => {
     const searchBar = shallow(
       <SearchBar
-        onFilterTextInput={onFilterTextInput}
+        onSearchTermInput={onSearchTermInput}
       />
     )
     const textBox = searchBar.find('#drink-input')
     const event = {target: {value: 'gin'}}
     textBox.simulate('change', event)
-    expect(onFilterTextInput).toBeCalledWith(event)
+    expect(onSearchTermInput).toBeCalledWith(event)
   })
 })

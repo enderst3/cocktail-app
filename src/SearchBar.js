@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 class SearchBar extends Component {
   constructor (props) {
     super(props)
-    this.textChangeCallback = this.props.onFilterTextInput.bind(this)
+    this.textChangeCallback = this.props.onSearchTermInput.bind(this)
   }
   render () {
     return (
@@ -26,7 +26,7 @@ class SearchBar extends Component {
 }
 
 SearchBar.propTypes = {
-  onFilterTextInput: PropTypes.func,
+  onSearchTermInput: PropTypes.func,
   searchTerm: PropTypes.string
 }
 

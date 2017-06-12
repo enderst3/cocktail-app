@@ -6,7 +6,8 @@
     "jest-cli": "^20.0.4",
     "react": "^15.5.4",
     "react-bootstrap": "^0.31.0",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "react-test-renderer": "^15.5.4"
   },
   "devDependencies": {
     "enzyme": "^2.8.2",
@@ -18,6 +19,7 @@
     "eslint-plugin-react": "^7.0.1",
     "eslint-plugin-standard": "^3.0.1",
     "jest": "^20.0.4",
+    "jest-fetch-mock": "^1.1.1",
     "react-addons-test-utils": "^15.5.1",
     "react-dom": "^15.5.4",
     "react-scripts": "1.0.7"

@@ -18,10 +18,10 @@ class App extends Component {
       drinks: [],
       selectedDrink: null
     }
-    this.onFilterTextInput = this.onFilterTextInput.bind(this)
+    this.onSearchTermInput = this.onSearchTermInput.bind(this)
   }
 
-  onFilterTextInput (e) {
+  onSearchTermInput (e) {
     const searchTerm = e.target.value
     this.setState({searchTerm})
     if (searchTerm !== '') {
@@ -33,9 +33,9 @@ class App extends Component {
             drinks: json.drinks,
             selectedDrink: null
           })
-          console.log('parsed json', json)
+          // console.log('parsed json', json)
         }).catch((err) => {
-          console.log('parsing failed', err)
+          // console.log('parsing failed', err)
         })
     }
   }
@@ -50,7 +50,7 @@ class App extends Component {
             </Jumbotron>
             <SearchBar
               searchTerm={this.state.searchTerm}
-              onFilterTextInput={this.onFilterTextInput}
+              onSearchTermInput={this.onSearchTermInput}
             />
             <RecipeDetail
               drink={this.state.selectedDrink}
