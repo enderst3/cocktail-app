@@ -19,6 +19,11 @@ class App extends Component {
       selectedDrink: null
     }
     this.onSearchTermInput = this.onSearchTermInput.bind(this)
+    this.onDrinkSelect= this.onDrinkSelect.bind(this)
+  }
+
+  onDrinkSelect (drink) {
+    this.setState({selectedDrink: drink})
   }
 
   onSearchTermInput (e) {
@@ -57,7 +62,7 @@ class App extends Component {
              />
             <DrinkList
               drinks={this.state.drinks}
-              onDrinkSelect={selectedDrink => this.setState({selectedDrink})}
+              onDrinkSelect={this.onDrinkSelect}
             />
           </Panel>
         </Col>

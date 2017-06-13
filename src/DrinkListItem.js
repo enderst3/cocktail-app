@@ -1,30 +1,43 @@
-import React from 'react'
+import React, { Component }  from 'react'
 import {ListGroupItem, Col} from 'react-bootstrap'
 import PropTypes from 'prop-types'
 
-const DrinkListItem = ({drink, onDrinkSelect}) => {
-  return (
-    <div>
-      <Col md={4}>
-        <ListGroupItem
-          className='Results'
-          onClick={() => onDrinkSelect(drink)}
-         >
-          <div className='CocktailImage'>
-            <img
-              src={drink.strDrinkThumb === null ? 'cocktail2.jpg' : drink.strDrinkThumb}
-              height='100'
-              alt=''
-             />
-          </div>
-          <div className='DrinkName'>
-            <h4>{drink.strDrink}</h4>
-            <p />
-          </div>
-        </ListGroupItem>
-      </Col>
-    </div>
-  )
+class DrinkListItem extends Component {
+  constructor (props) {
+    super(props)
+    this.handleOnClick = this.handleOnClick.bind(this)
+  }
+  handleOnClick(e) {
+    console.log('i was clicked')
+    this.props.onDrinkSelect(this.props.drink)
+  }
+
+  render () {
+    return (
+      <div>
+        <Col md={4}>
+          <ListGroupItem
+            className='Results'
+            onClick={this.handleOnClick}
+            value={this.props.drink}
+           >
+            <div className='CocktailImage'>
+              <img
+                src={this.props.drink.strDrinkThumb === null ? 'cocktail2.jpg' : this.props.drink.strDrinkThumb}
+                height='100'
+                alt=''
+                className='Image'
+               />
+            </div>
+            <div className='DrinkName'>
+              <h4>{this.props.drink.strDrink}</h4>
+              <p />
+            </div>
+          </ListGroupItem>
+        </Col>
+      </div>
+    )
+  }
 }
 
 DrinkListItem.propTypes = {

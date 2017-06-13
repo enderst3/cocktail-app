@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App checks a snapshot 1`] = `
+<div
+  className="App"
+>
+  <div
+    className="col-md-8 col-md-offset-2"
+  >
+    <div
+      className="panel panel-default"
+      id={undefined}
+    >
+      <div
+        className="panel-body"
+      >
+        <div
+          className="Header jumbotron"
+        >
+          <h1>
+            Cocktail Search App
+          </h1>
+        </div>
+        <div
+          className="SearchBar panel panel-default"
+          id={undefined}
+        >
+          <div
+            className="panel-body"
+          >
+            <h3>
+              Enter a Drink Name:
+            </h3>
+            <form>
+              <input
+                className="form-control"
+                id="drink-input"
+                onChange={[Function]}
+                placeholder="Enter Drink Name..."
+                type="text"
+                value=""
+              />
+            </form>
+          </div>
+        </div>
+        <div
+          className="StartDiv"
+        />
+        <ul
+          className="DrinkList list-group"
+        />
+      </div>
+      <div
+        className="panel-footer"
+      >
+        ©2017 My Cocktails Inc.
+      </div>
+    </div>
+  </div>
+</div>
+`;

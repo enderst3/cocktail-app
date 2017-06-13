@@ -2,20 +2,38 @@ import React from 'react'
 import DrinkListItem from '../DrinkListItem'
 import { shallow } from 'enzyme'
 import {DRINK_DATA} from '../test-data'
+import fetch from 'jest-fetch-mock'
+global.fetch = fetch
 
 /* global it describe expect beforeEach */
 
+global.fetch.mockResponse(JSON.stringify(DRINK_DATA))
+
 describe('DrinkListItem', () => {
   let wrapper
+  const onDrinkSelect = jest.fn();
 
   beforeEach(() => {
     wrapper = shallow(
       <DrinkListItem
-        drinks={DRINK_DATA}
+        drink={DRINK_DATA}
+        onDrinkSelect={onDrinkSelect}
       />
     )
   })
-  it('Should display the drink', () => {
+  it('Should display the drink image', () => {
     expect(wrapper.find('.Results').exists()).toBe(true)
+  })
+
+  it('Should display the drink name', () => {
+    expect(wrapper.find('.DrinkName').exists()).toBe(true)
+  })
+
+  it('should call handleOnClick', () => {
+    wrapper.find('.Results').simulate('click')
+    setTimeout(() => {
+        expect(wrapper.find('.RecipeDetail').exists()).toBe(true)
+        done()
+      }, 50)
   })
 })
