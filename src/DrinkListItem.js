@@ -1,4 +1,4 @@
-import React, { Component }  from 'react'
+import React, { Component } from 'react'
 import {ListGroupItem, Col} from 'react-bootstrap'
 import PropTypes from 'prop-types'
 
@@ -7,7 +7,7 @@ class DrinkListItem extends Component {
     super(props)
     this.handleOnClick = this.handleOnClick.bind(this)
   }
-  handleOnClick(e) {
+  handleOnClick (e) {
     console.log('i was clicked')
     this.props.onDrinkSelect(this.props.drink)
   }

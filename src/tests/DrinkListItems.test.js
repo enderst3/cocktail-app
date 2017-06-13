@@ -5,13 +5,13 @@ import {DRINK_DATA} from '../test-data'
 import fetch from 'jest-fetch-mock'
 global.fetch = fetch
 
-/* global it describe expect beforeEach */
+/* global it describe expect beforeEach jest done */
 
 global.fetch.mockResponse(JSON.stringify(DRINK_DATA))
 
 describe('DrinkListItem', () => {
   let wrapper
-  const onDrinkSelect = jest.fn();
+  const onDrinkSelect = jest.fn()
 
   beforeEach(() => {
     wrapper = shallow(
@@ -32,8 +32,8 @@ describe('DrinkListItem', () => {
   it('should call handleOnClick', () => {
     wrapper.find('.Results').simulate('click')
     setTimeout(() => {
-        expect(wrapper.find('.RecipeDetail').exists()).toBe(true)
-        done()
-      }, 50)
+      expect(wrapper.find('.RecipeDetail').exists()).toBe(true)
+      done()
+    }, 50)
   })
 })

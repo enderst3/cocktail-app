@@ -6,7 +6,7 @@ import fetch from 'jest-fetch-mock'
 import renderer from 'react-test-renderer'
 global.fetch = fetch
 
-/* global it describe expect beforeEach */
+/* global it describe expect beforeEach jest */
 
 global.fetch.mockResponse(JSON.stringify(DRINK_DATA))
 
@@ -20,7 +20,7 @@ describe('App', () => {
 
 describe('SearchBar', () => {
   let wrapper, app
-  const onDrinkSelect = jest.fn();
+  const onDrinkSelect = jest.fn()
 
   beforeEach(() => {
     wrapper = shallow(
@@ -39,5 +39,4 @@ describe('SearchBar', () => {
   //   app.onDrinkSelect({se})
   //   wrapper.setState({isEditing: false})
   // })
-
 })

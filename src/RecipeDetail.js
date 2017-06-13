@@ -2,7 +2,6 @@ import React from 'react'
 import {Panel} from 'react-bootstrap'
 import PropTypes from 'prop-types'
 
-
 const RecipeDetail = ({drink}) => {
   if (!drink) {
     return (

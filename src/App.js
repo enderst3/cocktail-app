@@ -19,7 +19,7 @@ class App extends Component {
       selectedDrink: null
     }
     this.onSearchTermInput = this.onSearchTermInput.bind(this)
-    this.onDrinkSelect= this.onDrinkSelect.bind(this)
+    this.onDrinkSelect = this.onDrinkSelect.bind(this)
   }
 
   onDrinkSelect (drink) {
