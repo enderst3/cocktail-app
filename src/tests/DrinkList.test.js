@@ -30,8 +30,8 @@ describe('DrinkList', () => {
       )
     })
 
-    it('should have a total of 3 drinks in ListGroup', () => {
-      expect(wrapper.find('.DrinkList').length).toBe(3)
+    it('should populate drink list', () => {
+      expect(wrapper.find('.DrinkList').length).toBe(1)
     })
   })
 })
