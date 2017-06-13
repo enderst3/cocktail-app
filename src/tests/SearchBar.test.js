@@ -6,7 +6,7 @@ import { shallow } from 'enzyme'
 
 describe('SearchBar', () => {
   let onSearchTermInput
-  let wrapper
+  // let wrapper
 
   beforeEach(() => {
     onSearchTermInput = jest.fn()

@@ -11,7 +11,7 @@ describe('DrinkList', () => {
   beforeEach(() => {
     wrapper = shallow(
       <DrinkList
-        drinks= {null}
+        drinks={null}
       />
     )
   })
@@ -25,13 +25,13 @@ describe('DrinkList', () => {
     beforeEach(() => {
       wrapper = shallow(
         <DrinkList
-          drinks= {DRINK_DATA}
+          drinks={DRINK_DATA}
         />
       )
     })
 
     it('should have a total of 3 drinks in ListGroup', () => {
-      expect(wrapper.find(<ListGroup />).length).toBe(3)
+      expect(wrapper.find('.DrinkList').length).toBe(3)
     })
   })
 })

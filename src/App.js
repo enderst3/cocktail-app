@@ -35,7 +35,7 @@ class App extends Component {
           })
           // console.log('parsed json', json)
         }).catch((err) => {
-          // console.log('parsing failed', err)
+          console.log('parsing failed', err)
         })
     }
   }
