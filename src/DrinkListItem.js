@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {ListGroupItem, Col} from 'react-bootstrap'
+import Thumbnail from './Thumbnail'
 import PropTypes from 'prop-types'
 
 class DrinkListItem extends Component {
@@ -8,7 +9,6 @@ class DrinkListItem extends Component {
     this.handleOnClick = this.handleOnClick.bind(this)
   }
   handleOnClick (e) {
-    console.log('i was clicked')
     this.props.onDrinkSelect(this.props.drink)
   }
 
@@ -22,12 +22,9 @@ class DrinkListItem extends Component {
             value={this.props.drink}
            >
             <div className='CocktailImage'>
-              <img
-                src={this.props.drink.strDrinkThumb === null ? 'cocktail2.jpg' : this.props.drink.strDrinkThumb}
-                height='100'
-                alt=''
-                className='Image'
-               />
+              <Thumbnail
+                drink={this.props.drink}
+              />
             </div>
             <div className='DrinkName'>
               <h4>{this.props.drink.strDrink}</h4>

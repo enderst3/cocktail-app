@@ -1,5 +1,6 @@
 import React from 'react'
 import {Panel} from 'react-bootstrap'
+import Thumbnail from './Thumbnail'
 import PropTypes from 'prop-types'
 
 const RecipeDetail = ({drink}) => {
@@ -12,10 +13,8 @@ const RecipeDetail = ({drink}) => {
   return (
     <Panel className='RecipeDetail'>
       <div className='CocktailImage'>
-        <img
-          src={drink.strDrinkThumb === null ? 'cocktail2.jpg' : drink.strDrinkThumb}
-          height='150'
-          alt=''
+        <Thumbnail
+          drink={drink}
         />
       </div>
       <div className='DrinkName'>
