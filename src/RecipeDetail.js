@@ -45,7 +45,7 @@ const RecipeDetail = ({drink}) => {
 }
 
 RecipeDetail.propTypes = {
-  drink: PropTypes.object
+  drink: PropTypes.array
 }
 
 export default RecipeDetail

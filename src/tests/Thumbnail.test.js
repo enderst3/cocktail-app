@@ -12,7 +12,19 @@ global.fetch.mockResponse(JSON.stringify(DRINK_DATA))
 describe('SearchBar', () => {
   let wrapper
 
-  it('should call show supplied image', () => {
+  it('should return an image', () => {
+    wrapper = shallow(
+      <Thumbnail
+        drink={DRINK_DATA}
+      />
+    )
+    setTimeout(() => {
+      expect(wrapper.find(<img />).exists()).toBe(true)
+      done()
+    }, 50)
+  })
+
+  it('should call show supplied image url', () => {
     wrapper = shallow(
       <Thumbnail
         drink={DRINK_DATA[2]}
@@ -24,7 +36,7 @@ describe('SearchBar', () => {
     }, 50)
   })
 
-  it('should call show supplied image', () => {
+  it('should call show default image', () => {
     wrapper = shallow(
       <Thumbnail
         drink={DRINK_DATA[0]}
@@ -32,18 +44,6 @@ describe('SearchBar', () => {
     )
     setTimeout(() => {
       expect(wrapper.find(<Thumbnail />)).toEqual('cocktail2')
-      done()
-    }, 50)
-  })
-
-  it('should return an image', () => {
-    wrapper = shallow(
-      <Thumbnail
-        drink={DRINK_DATA}
-      />
-    )
-    setTimeout(() => {
-      expect(wrapper.find(<img />).exists()).toBe(true)
       done()
     }, 50)
   })

@@ -6,7 +6,7 @@ const Thumbnail = ({drink}) => {
     return (
       <img
         src='cocktail2.jpg'
-        height='100'
+        height='125'
         alt=''
       />
     )
@@ -15,13 +15,13 @@ const Thumbnail = ({drink}) => {
   return (
     <img
       src={drink.strDrinkThumb}
-      height='100'
+      height='125'
       alt=''
     />
   )
 }
 
 Thumbnail.propTypes = {
-  drink: PropTypes.object
+  drink: PropTypes.array
 }
 export default Thumbnail

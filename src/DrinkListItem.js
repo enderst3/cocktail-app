@@ -38,7 +38,7 @@ class DrinkListItem extends Component {
 }
 
 DrinkListItem.propTypes = {
-  drink: PropTypes.object,
+  drink: PropTypes.array,
   onDrinkSelect: PropTypes.func
 }
 
