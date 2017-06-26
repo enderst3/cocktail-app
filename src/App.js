@@ -19,7 +19,6 @@ class App extends Component {
       selectedDrink: null
     }
     this.onFilterTextInput = this.onFilterTextInput.bind(this)
-    
   }
 
   onFilterTextInput (e) {

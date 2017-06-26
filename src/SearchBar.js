@@ -24,7 +24,6 @@ class SearchBar extends Component {
       </Panel>
     )
   }
-
 }
 
 SearchBar.propTypes = {
