@@ -5,7 +5,7 @@ const Thumbnail = ({drink}) => {
   if (drink.strDrinkThumb === null) {
     return (
       <img
-        src='cocktail2.jpg'
+        src='cocktail.jpg'
         height='125'
         alt=''
       />

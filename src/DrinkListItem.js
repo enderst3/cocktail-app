@@ -10,7 +10,7 @@ class DrinkListItem extends Component {
   }
   handleOnClick (e) {
     this.props.onDrinkSelect(this.props.drink)
-    window.scrollTo(0, 315)
+    window.scrollTo(0, 375)
   }
 
   render () {

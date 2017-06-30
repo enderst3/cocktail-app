@@ -30,3 +30,16 @@
 p {
   font-size: 16px;
 }
+
+body {
+	background-image: url('/cocktail2.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.App {
+  opacity: 0.8;
+  padding: 50px;
+}
