@@ -18,6 +18,11 @@ class SearchBar extends Component {
             placeholder='Enter Drink Name...'
             value={this.props.searchTerm}
             onChange={this.textChangeCallback}
+            onKeyPress={event => {
+              if (event.key === 'Enter') {
+                event.preventDefault()
+              }
+            }}
           />
         </form>
       </Panel>
