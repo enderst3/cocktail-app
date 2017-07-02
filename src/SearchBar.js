@@ -7,6 +7,13 @@ class SearchBar extends Component {
     super(props)
     this.textChangeCallback = this.props.onSearchTermInput.bind(this)
   }
+
+  handleOnKeyPress (e) {
+    if (e.key === 'Enter') {
+      e.preventDefault()
+    }
+  }
+
   render () {
     return (
       <Panel className='SearchBar'>
@@ -18,11 +25,7 @@ class SearchBar extends Component {
             placeholder='Enter Drink Name...'
             value={this.props.searchTerm}
             onChange={this.textChangeCallback}
-            onKeyPress={event => {
-              if (event.key === 'Enter') {
-                event.preventDefault()
-              }
-            }}
+            onKeyPress={this.handleOnKeyPress}
           />
         </form>
       </Panel>
