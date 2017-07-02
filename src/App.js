@@ -26,6 +26,12 @@ class App extends Component {
     this.setState({selectedDrink: drink})
   }
 
+  handleOnKeyPress (e) {
+    if (e.key === 'Enter') {
+      e.preventDefault()
+    }
+  }
+
   onSearchTermInput (e) {
     const searchTerm = e.target.value
     this.setState({searchTerm})
@@ -56,6 +62,7 @@ class App extends Component {
             <SearchBar
               searchTerm={this.state.searchTerm}
               onSearchTermInput={this.onSearchTermInput}
+              onKeyPress={this.handleOnKeyPress}
             />
             <RecipeDetail
               drink={this.state.selectedDrink}

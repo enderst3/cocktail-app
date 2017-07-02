@@ -36,6 +36,7 @@ exports[`App checks a snapshot 1`] = `
                 className="form-control"
                 id="drink-input"
                 onChange={[Function]}
+                onKeyPress={[Function]}
                 placeholder="Enter Drink Name..."
                 type="text"
                 value=""
