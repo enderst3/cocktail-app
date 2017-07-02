@@ -62,7 +62,6 @@ class App extends Component {
             <SearchBar
               searchTerm={this.state.searchTerm}
               onSearchTermInput={this.onSearchTermInput}
-              onKeyPress={this.handleOnKeyPress}
             />
             <RecipeDetail
               drink={this.state.selectedDrink}
