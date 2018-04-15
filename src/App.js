@@ -7,7 +7,7 @@ import './App.css'
 
 /* global fetch */
 
-const baseUrl = 'http://www.thecocktaildb.com/api/json/v1/1/search.php?s='
+const baseUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
 
 class App extends Component {
   constructor (props) {

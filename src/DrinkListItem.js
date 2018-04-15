@@ -16,7 +16,7 @@ class DrinkListItem extends Component {
   render () {
     return (
       <div>
-        <Col md={4}>
+        <Col>
           <ListGroupItem
             className='Results'
             onClick={this.handleOnClick}

@@ -1,6 +1,6 @@
 import React from 'react'
 import DrinkListItem from './DrinkListItem'
-import {ListGroup} from 'react-bootstrap'
+import {ListGroup, Row} from 'react-bootstrap'
 import PropTypes from 'prop-types'
 
 const DrinkList = (props) => {
@@ -16,7 +16,9 @@ const DrinkList = (props) => {
   })
   return (
     <ListGroup className='DrinkList'>
-      {drinkItems}
+      <Row>
+        {drinkItems}
+      </Row>
     </ListGroup>
   )
 }
